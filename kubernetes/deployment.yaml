@@ -1,0 +1,22 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: konsign-api
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: konsign-api
+  template:
+    metadata:
+      labels:
+        app: konsign-api
+    spec:
+      containers:
+      - name: konsign-api
+        image: razdeep/konsign-api:main.4731fc3910c462799baa8de60aeff1a580049fc7
+        ports:
+        - containerPort: 8080
+        env:
+        - name: PORT
+          value: "8080"
