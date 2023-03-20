@@ -14,9 +14,11 @@ spec:
     spec:
       containers:
       - name: konsign-api
-        image: razdeep/konsign-api:main.4731fc3910c462799baa8de60aeff1a580049fc7
+        image: razdeep/konsign-api:main.c9f79fad4a9f5d2ad99e0754f83719ff621c2bf7
         ports:
         - containerPort: 8080
         env:
         - name: PORT
           value: "8080"
+        - name: PROFILE
+          value: dev
