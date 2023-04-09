@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
       - name: konsign-api
-        image: razdeep/konsign-api:main.c9f79fad4a9f5d2ad99e0754f83719ff621c2bf7
+        image: razdeep/konsign-api:$IMAGE_TAG
         ports:
         - containerPort: 8080
         env:
